@@ -20,7 +20,7 @@ const Ceo = () => {
           <div className="relative w-96 max-sm:w-64">
             <p
               data-aos="fade-down"
-              className="px-4 text-sm font-extralight text-gray-700"
+              className="px-4 text-sm font-extralight text-gray-950"
             >
               Hi there, I'm Lawal Kamil Kayode , the CEO of Kaylaw
               Incorporation. I'm a uk-based nigerian enterpreneur , Investor, IT

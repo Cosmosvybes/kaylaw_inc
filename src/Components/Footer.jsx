@@ -8,7 +8,7 @@ import {
 const Footer = () => {
   return (
     <>
-      <div className="grid h-72 bg-green-600  px-44 max-sm:px-3 max-sm:py-6 grid-cols-2  py-7 ">
+      <div className="grid h-72 bg-green-600  px-44 max-sm:px-3 max-sm:py-6 grid-cols-2  py-7 text-xs ">
         <div className="flex flex-col text-white mb-1 text-sm">
           <h1>Links </h1>
           <Link>Quick link</Link>
