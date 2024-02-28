@@ -8,19 +8,19 @@ const Ceo = () => {
             {" "}
             MEET THE CEO
           </h1>
-          <p className="px-4 text-sm text-gray-600">
+          <p className="px-4 text-sm font-extralight text-gray-500">
             Hi there, I'm Lawal Kamil Kayode , the CEO of Kaylaw Incorporation.{" "}
           </p>
         </div>
-        <a href={ceo}>
+      
           <div className="relative h-auto w-80  max-sm:w-full rounded-md max-sm:h-auto py-2 px-2 ">
-            <img
+          <a href={ceo}>  <img
               src={ceo}
               alt="ceo kaylaw inc"
               className="  rounded-lg w-auto border border-gray-300  h-full max-sm:rounded-full"
-            />
+            />       </a>
           </div>
-        </a>
+ 
       </div>
     </>
   );
