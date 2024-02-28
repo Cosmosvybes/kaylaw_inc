@@ -1,11 +1,14 @@
 import { useState } from "react";
-import { Ceo, Header, Nav } from "./Components";
+import { Ceo, Footer, Header, Nav, Service, Social } from "./Components";
 function App() {
   return (
     <>
       <Nav />
       <Header />
       <Ceo />
+      <Service />
+      <Social />
+      <Footer />
     </>
   );
 }

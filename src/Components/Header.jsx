@@ -34,18 +34,19 @@ const Header = () => {
           Hey welcome, whether you are looking to exchange currencies, exchange
           giftcards. We have got you covered.
         </p>
-        <Link className="h-30 py-3 bg-sky-500 border-2 font-bold border-white  text-gray-100 hover:text-gray-100 max-sm:font-light max-sm:hover:bg-sky-700  rounded-md text-center w-72 max-sm:w-40 hover:bg-sky-600  cursor-pointer mt-2 max-sm:text-gray-100 max-sm:bg-sky-600 shadow-inner max-sm:border border-none shadow-gray-100 ">
+    
+        <Link to="contact" className="h-30 py-3 cursor-pointer m-2  text-white font-extrabold  border border-sky-500 w-72 max-sm:w-52 hover:bg-sky-400 rounded-md text-center shadow-inner shadow-sky-400 ">
           Trade now
         </Link>
         {/* </div> */}
       </div>
       <div className="flex h-52 justify-center py-2 max-sm:py-2 px-10 max-sm:px-5 flex-col bg-gray-100 ">
         <h1 className="text-sky-500 font-extrabold text-2xl  text-center max-sm:text-sm">
-          ARE YOU TIRED TRADING YOUR FUNDS WITH LOW-RATE VENDORS ?
+          TIRED OF TRADING YOUR FUNDS WITH LOW-RATE VENDORS ?
         </h1>
-        <p className="px-4 text-center font-extralight text-gray-600 text-sm">
+        <p className="px-4 text-center font-extralight text-gray-700 text-sm">
           Worry no more, we have the best exchange rate compared to your
-          favorite vendor. Our transactions are swift and paymentis  quicker than
+          favorite vendor. Our transactions are swift and paymentis quicker than
           you may have imagined.
         </p>
       </div>
