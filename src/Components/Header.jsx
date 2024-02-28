@@ -43,7 +43,7 @@ const Header = () => {
         <h1 className="text-sky-500 font-extrabold text-2xl  text-center max-sm:text-sm">
           ARE YOU TIRED TRADING YOUR FUNDS WITH LOW-RATE VENDORS ?
         </h1>
-        <p className="px-4 text-center text-gray-500 text-sm">
+        <p className="px-4 text-center text-gray-600 text-sm">
           Worry no more, we have the best exchange rate compared to your
           favorite vendor. Our transactions are swift and paymentis  quicker than
           you may have imagined.
