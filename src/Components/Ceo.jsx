@@ -8,7 +8,7 @@ const Ceo = () => {
             {" "}
             MEET THE CEO
           </h1>
-          <p className="px-4 text-sm font-extralight text-gray-500">
+          <p className="px-4 text-sm font-extralight text-gray-600">
             Hi there, I'm Lawal Kamil Kayode , the CEO of Kaylaw Incorporation.{" "}
           </p>
         </div>
