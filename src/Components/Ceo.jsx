@@ -1,4 +1,4 @@
-import { Button, Link } from "react-scroll";
+import { Button } from "react-scroll";
 import ceo from "../assets/kaylaw2.jpeg";
 import kay from "../assets/kamil3.jpeg";
 import Aos from "aos";
@@ -87,6 +87,7 @@ const Ceo = () => {
               )}
               <div className="relative px-4 py-2 w-36">
                 <Button
+                to="/"
                   className="py-2 w-48  text-white rounded-md  font-medium bg-green-500 px-2 cursor-pointer hover:bg-green-700"
                   onClick={() => setReadmore(!readmore)}
                 >

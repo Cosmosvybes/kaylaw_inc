@@ -18,15 +18,29 @@ const Nav = () => {
   return (
     <>
       <div className="flex justify-between bg-sky-500  items-center py-1  relative px-3 max-sm:px-0">
-        <h1 className="text-3xl font-extrabold text-white px-2"> Logo</h1>
+        <h1 className="text-3xl font-extrabold t text-white px-2">
+          <span className="text-emerald-900"> kamil </span> Lawal
+        </h1>
         <div className="flex justify-around gap-1 max-sm:hidden">
-          <Link className="border border-white rounded-md text-white px-1 cursor-pointer hover:bg-gray-100 hover:text-sky-500">
+          <Link
+            to="about"
+            smooth={true}
+            className="border border-white rounded-md text-white px-1 cursor-pointer hover:bg-gray-100 hover:text-sky-500"
+          >
             <UserBlock className="inline " /> About me
           </Link>
-          <Link className="border border-white rounded-md text-white px-1 cursor-pointer hover:bg-gray-100 hover:text-sky-500">
+          <Link
+            to="biography"
+            smooth={true}
+            className="border border-white rounded-md text-white px-1 cursor-pointer hover:bg-gray-100 hover:text-sky-500"
+          >
             <Information className="inline" /> Biography
           </Link>
-          <Link className="border border-white rounded-md text-white px-1 cursor-pointer hover:bg-gray-100 hover:text-sky-500">
+          <Link
+            to="contact"
+            smooth={true}
+            className="border border-white rounded-md text-white px-1 cursor-pointer hover:bg-gray-100 hover:text-sky-500"
+          >
             {" "}
             <CallUser className="inline " /> Contact me
           </Link>
@@ -45,7 +59,7 @@ const Nav = () => {
         />
 
         <div
-          className="flex flex-col h-screen absolute z-10 bg-sky-500 w-full top-0 items-center justify-start py-10"
+          className="flex flex-col h-screen absolute  bg-sky-500 w-full top-0 items-center justify-start py-10"
           style={{ opacity: !openNAv ? 0 : 1, transition: "0.7s" }}
         >
           <ArrowBack
