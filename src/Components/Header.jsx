@@ -48,7 +48,7 @@ const Header = () => {
       </div>
       <div className="flex h-52 justify-center py-2 max-sm:py-2 px-10 max-sm:px-5 flex-col bg-gray-100 ">
         <h1 className="text-sky-500 font-extrabold text-2xl  text-center max-sm:text-sm">
-          WHO IS LAWAL KAMIL ?
+          WHO IS  KAMIL LAWAL ?
         </h1>
         <p className="px-4 text-center font-extralight text-gray-950 text-sm">
           A dedicated leader with a proven track record of driving positive
