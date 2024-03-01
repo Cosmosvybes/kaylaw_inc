@@ -3,6 +3,7 @@ import {
   Facebook,
   Whatsapp,
   Telegram,
+  Instagram,
 } from "react-huge-icons/outline";
 const Social = () => {
   return (
@@ -14,7 +15,20 @@ const Social = () => {
           </h1>
           <div className="flex justify-around px-10 items-center w-96 rounded-full h-36 max-sm:h-28 bg-gray-200  border border-gray-200 max-sm:w-64">
             <Twitter className="text-2xl text-sky-600" />{" "}
-            <Facebook className="text-2xl text-blue-950" />{" "}
+            <Facebook
+              className="text-2xl text-blue-950"
+              onClick={() => {
+                window.open("https://facebook.com/lawal.kamil.3");
+              }}
+            />{" "}
+            <Instagram
+              className="text-2xl text-blue-950"
+              onClick={() => {
+                window.open(
+                  "https://www.instagram.com/kaythrix?igsh=MXZwaXcyb3N3MWY2cg%3D%3D&utm_source=qr"
+                );
+              }}
+            />
             <Whatsapp className="text-2xl text-green-600" />{" "}
             <Telegram className="text-2xl text-blue-900" />
           </div>

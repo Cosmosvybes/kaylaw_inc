@@ -16,11 +16,11 @@ const Footer = () => {
           <Link>Biography</Link>
         </div>
         <div className="flex flex-col mt-1">
-          <h3 className="text-white">Contact Address </h3>
-          <p className="text-white">
-            <HomeLocation className=" inline text-white text-2xl" /> 59 Rose
+          <h3 className="text-white">Phone Contact </h3>
+          {/* <p className="text-white">
+            <HomeLocation className=" inline text-white text-2xl" />  Rose
             Street, YORK (United Kingdom)
-          </p>
+          </p> */}
           <p className="text-white text-sm">
             <Calling className="text-2xl inline" /> +447769497343
           </p>

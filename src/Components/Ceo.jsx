@@ -27,9 +27,8 @@ const Ceo = () => {
                 className="px-4 text-sm font-extralight text-gray-950 "
               >
                 <span className="text-green-500 text-xl">Kamil Lawal</span> ,
-                the CEO of Kaylaw Incorporation. Is a UK-based nigerian
-                enterpreneur , Investor, IT professional, public/motivational
-                speaker, business oriented individual and activist.
+                the manager of Softlink International Limited. And UK-based
+                nigerian enterpreneur .
               </p>
               {readmore && (
                 <div className="relative">
@@ -39,10 +38,11 @@ const Ceo = () => {
                   <p className="px-4 text-sm font-extralight text-gray-950 mt-2">
                     {" "}
                     Kamil Lawal is multifaceted individual with wealth of of
-                    experience in leadership, eductaion, and advocacy. His roles
+                    experience in leadership, education, and advocacy. His roles
                     within the United Kingdom and various community organzations
                     reflect his dedication to to promoting inclusivity,
-                    diversity , and equality in bothacademic and socila spheres.
+                    diversity , and equality in both academic and social
+                    spheres.
                   </p>
                   <p className="px-4 text-sm font-extralight text-gray-950 mt-2">
                     With a solid foundation in business administration and
@@ -87,7 +87,7 @@ const Ceo = () => {
               )}
               <div className="relative px-4 py-2 w-36">
                 <Button
-                to="/"
+                  to="/"
                   className="py-2 w-48 z-10 text-white rounded-md  font-medium bg-green-500 px-2 cursor-pointer hover:bg-green-700"
                   onClick={() => setReadmore(!readmore)}
                 >
