@@ -4,6 +4,7 @@ import {
   Whatsapp,
   Telegram,
   Instagram,
+  Linkedln,
 } from "react-huge-icons/outline";
 const Social = () => {
   return (
@@ -14,6 +15,14 @@ const Social = () => {
             CONNECT WITH ME
           </h1>
           <div className="flex justify-around px-10 items-center w-96 rounded-full h-36 max-sm:h-28 bg-gray-200  border border-gray-200 max-sm:w-64">
+            <Instagram
+              className="text-2xl text-rose-600"
+              onClick={() => {
+                window.open(
+                  "https://www.instagram.com/kaythrix?igsh=MXZwaXcyb3N3MWY2cg%3D%3D&utm_source=qr"
+                );
+              }}
+            />
             <Twitter className="text-2xl text-sky-600" />{" "}
             <Facebook
               className="text-2xl text-blue-950"
@@ -21,15 +30,15 @@ const Social = () => {
                 window.open("https://facebook.com/lawal.kamil.3");
               }}
             />{" "}
-            <Instagram
-              className="text-2xl text-blue-950"
+            <Linkedln
               onClick={() => {
                 window.open(
-                  "https://www.instagram.com/kaythrix?igsh=MXZwaXcyb3N3MWY2cg%3D%3D&utm_source=qr"
+                  "     https://www.linkedin.com/in/kamil-kayode-lawal"
                 );
               }}
+              className="text-2xl text-blue-700"
             />
-            <Whatsapp className="text-2xl text-green-600" />{" "}
+            {/* <Whatsapp className="text-2xl text-green-600" />{" "} */}
             <Telegram className="text-2xl text-blue-900" />
           </div>
         </div>

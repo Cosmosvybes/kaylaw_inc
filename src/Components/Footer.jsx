@@ -3,14 +3,13 @@ import {
   SmartPhone,
   Calling,
   Call,
-  HomeLocation,
 } from "react-huge-icons/outline";
 const Footer = () => {
   return (
     <>
-      <div className="grid h-64 bg-green-600  px-44 max-sm:px-3 max-sm:py-4 grid-cols-2  py-4 text-xs ">
+      <div className="grid h-64 bg-green-600  px-44 max-sm:px-3 max-sm:py-4 grid-cols-2 max-sm:grid-cols-1  py-4 text-xs ">
         <div className="flex flex-col text-white mb-1 text-sm">
-          <h1>Links </h1>
+          <h1 className="text-xl">Links </h1>
           <Link>Home</Link>
           <Link>Contact me</Link>
           <Link>Biography</Link>
