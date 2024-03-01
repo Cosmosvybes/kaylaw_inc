@@ -88,7 +88,7 @@ const Ceo = () => {
               <div className="relative px-4 py-2 w-36">
                 <Button
                 to="/"
-                  className="py-2 w-48  text-white rounded-md  font-medium bg-green-500 px-2 cursor-pointer hover:bg-green-700"
+                  className="py-2 w-48 z-10 text-white rounded-md  font-medium bg-green-500 px-2 cursor-pointer hover:bg-green-700"
                   onClick={() => setReadmore(!readmore)}
                 >
                   {readmore ? "Read less " : "Continue reading"}
