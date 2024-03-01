@@ -28,7 +28,7 @@ const Ceo = () => {
               >
                 <span className="text-green-500 text-xl">Kamil Lawal</span> ,
                 the manager of Softlink International Limited. And UK-based
-                nigerian enterpreneur .
+                Nigeria entrepreneur .
               </p>
               {readmore && (
                 <div className="relative">
