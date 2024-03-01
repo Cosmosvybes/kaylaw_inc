@@ -8,7 +8,7 @@ import {
 const Footer = () => {
   return (
     <>
-      <div className="grid h-72 bg-green-600  px-44 max-sm:px-3 max-sm:py-6 grid-cols-2  py-7 text-xs ">
+      <div className="grid h-64 bg-green-600  px-44 max-sm:px-3 max-sm:py-4 grid-cols-2  py-4 text-xs ">
         <div className="flex flex-col text-white mb-1 text-sm">
           <h1>Links </h1>
           <Link>Home</Link>
@@ -25,9 +25,12 @@ const Footer = () => {
             <Calling className="text-2xl inline" /> +447769497343
           </p>
         </div>
-        {/* <h1 className="text-white font-bold "> KAYLAW INC.</h1> */}
-        <p className="pt-2 text-white  text-sm">
-          KAMIL LAWAL &copy; All rights reserved {new Date().getFullYear()}{" "}
+        <div className="relative grid grid-cols-1 mt-2">
+          <h1 className="text-white font-bold "> KAMIL LAWAL.</h1>
+        </div>
+
+        <p className="pt-2 text-white  text-xs ">
+     All rights reserved {new Date().getFullYear()} &copy;
         </p>
       </div>
     </>
