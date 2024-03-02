@@ -14,8 +14,8 @@ const Ceo = () => {
   // Aos.init();
   return (
     <>
-      <section id="about">
-        <div className="flex justify-around h-auto  max-sm:items-around bg-gray-50 py-5  max-sm:gap-1">
+      <section id="about" >
+        <div className="flex justify-around h-auto  max-sm:items-around bg-gray-100 py-5  max-sm:gap-1">
           <div className="flex flex-col justify-center ">
             <h1 className=" text-green-500  font-extrabold text-2xl max-sm:text-sm  px-4">
               {" "}
