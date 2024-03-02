@@ -52,6 +52,7 @@ const Biography = () => {
               </p>
               {readmore && (
                 <div className="relative">
+              
                   <p className="px-4 text-sm font-extralight text-gray-950 mt-2">
                     {" "}
                     With a solid foundation in computer science and a Higher
@@ -77,9 +78,9 @@ const Biography = () => {
                     Upon relocating to the United Kingdom, Kamil immersed
                     himself in student activism,, serving as an Academic
                     Representative and later ascending to the position of
-                    President of Education at York St. John University Syudent
+                    President of Education at York St. John University student
                     Union. In this role he leads a team responsible for over{" "}
-                    <b>10,000</b> students, ensuring their voices are heard and
+                    <b className="text-sm text-gry-950 font-bold">10,000</b> students, ensuring their voices are heard and
                     their needs are addressed within the academic community.
                     Kamil's strategic vision and collaborative approach have
                     resulted in the succesful management of academic
