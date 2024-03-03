@@ -90,7 +90,7 @@ const Biography = () => {
                   </p>
                   <p className="px-4 text-sm font-extralight text-gray-950 mt-2">
                     {" "}
-                    Beyond his university responsibilities, Kamil id eeply
+                    Beyond his university responsibilities, Kamil is deeply
                     engaged in grassroots initiatives promoting peace, social
                     justice and enviromental sustainability. He serves as the
                     General Secretary of the National Youth Peace Summit in
