@@ -14,8 +14,8 @@ const Ceo = () => {
   // Aos.init();
   return (
     <>
-      <section id="about" >
-        <div className="flex justify-around h-auto  max-sm:items-around bg-gray-100 py-5  max-sm:gap-1">
+      <section id="about">
+        <div className="flex justify-around h-auto  max-sm:items-around bg-gray-100 py-5  max-sm:gap-1 ">
           <div className="flex flex-col justify-center ">
             <h1 className=" text-green-500  font-extrabold text-2xl max-sm:text-sm  px-4">
               {" "}
@@ -31,7 +31,10 @@ const Ceo = () => {
                 Nigeria entrepreneur .
               </p>
               {readmore && (
-                <div className="relative">
+                <div
+                  className="relative"
+                  // style={{ height: readmore ? 0 : "auto" }}
+                >
                   <h1 className=" text-green-500  font-extrabold text-xl mt-2 max-sm:text-sm  px-4">
                     About Kamil
                   </h1>
@@ -99,24 +102,24 @@ const Ceo = () => {
 
           <div
             data-aos="fade-down"
-            className="relative flex-col  flex h-auto w-96 justify-between max-sm:w-auto rounded-md max-sm:h-auto py-2 px-2 "
+            className="relative flex-col  flex h-auto w-96 justify-center max-sm:justify-between max-sm:w-auto rounded-md max-sm:h-auto py-2 px-2 "
           >
             <a href={ceo}>
               {" "}
               <img
                 src={ceo}
-                style={{ shapeOutside: "50%" }}
+                // style={{ shapeOutside: "50%" }}
                 alt="ceo kaylaw inc"
-                className="  rounded-lg w-auto border hover:bg-gray-200 border-gray-300  h-auto max-sm:rounded-full"
+                className="relative flex-col  object-cover  flex h-auto w-96 justify-between max-sm:justify-center  max-sm:w-full rounded-lg  py-2 px-2 max-sm:rounded-xl"
               />{" "}
             </a>
             <a href={kay} className="hidden max-sm:block">
               {" "}
               <img
                 src={kay}
-                style={{ shapeOutside: "50%" }}
+                // style={{ shapeOutside: "50%" }}
                 alt="ceo kaylaw inc"
-                className="  rounded-lg w-auto border hover:bg-gray-200 border-gray-300  h-auto max-sm:rounded-full"
+                className="relative flex-col  flex h-auto w-96 object-cover justify-between max-sm:justify-center  max-sm:w-full rounded-lg  py-2 px-2  max-sm:rounded-xl "
               />{" "}
             </a>
           </div>

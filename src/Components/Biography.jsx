@@ -7,27 +7,27 @@ const Biography = () => {
   return (
     <>
       <section id="biography">
-        <div className="flex justify-around h-auto  max-sm:items-around bg-gray-100 py-5  max-sm:gap-1">
+        <div className="flex justify-around h-auto  max-sm:items-around bg-gray-100 py-5  max-sm:gap-2 ">
           <div
             data-aos="fade-down"
-            className="relative flex-col  flex h-auto w-96 justify-between  max-sm:w-auto rounded-md max-sm:h-auto py-2 px-2 "
+            className="relative flex-col  flex h-auto w-96 justify-between max-sm:justify-between  max-sm:w-full rounded-md px-2"
           >
             <a href={kaylaw}>
               {" "}
               <img
                 src={kaylaw}
-                style={{ shapeOutside: "50%" }}
+                // style={{ shapeOutside: "50%" }}
                 alt="ceo kaylaw inc"
-                className="  rounded-lg w-auto border hover:bg-gray-200 border-gray-300  h-auto max-sm:rounded-full"
+                className="rounded-lg object-cover w-auto border hover:bg-gray-200 border-gray-300 h-auto max-sm:h-full max-sm:rounded-md"
               />{" "}
             </a>
             <a href={ceo} className="hidden max-sm:block">
               {" "}
               <img
                 src={ceo}
-                style={{ shapeOutside: "50%" }}
+                // style={{ shapeOutside: "50%" }}
                 alt="ceo kaylaw inc"
-                className="  rounded-lg w-auto border hover:bg-gray-200 border-gray-300  h-auto max-sm:rounded-full"
+                className="  rounded-md w-auto border hover:bg-gray-200 max-sm:h-full object-cover border-gray-300  h-auto max-sm:rounded-md"
               />{" "}
             </a>
           </div>
@@ -44,7 +44,7 @@ const Biography = () => {
                 <span className="text-sky-500 text-xl">Kamil Lawal,</span> is a
                 dynamic leader and advocate for students right and empowerment,
                 currently serving as the{" "}
-                <b className="text-green-500">President </b>of Eduation at York
+                <b className="text-sky-500">President </b>of Eduation at York
                 St John University Student Union in the United Kingdom. Born and
                 raised in Nigeria, Kamil's journey, is marked by a relentless
                 commitment to education, social justice and community
@@ -80,7 +80,7 @@ const Biography = () => {
                     Representative and later ascending to the position of
                     President of Education at York St. John University student
                     Union. In this role he leads a team responsible for over{" "}
-                    <b className="text-sm text-gry-950 font-bold">10,000</b> students, ensuring their voices are heard and
+                    <b className="text-sm text-gray-600 font-bold">10,000</b> students, ensuring their voices are heard and
                     their needs are addressed within the academic community.
                     Kamil's strategic vision and collaborative approach have
                     resulted in the succesful management of academic
@@ -98,7 +98,7 @@ const Biography = () => {
                     Student for Liberty and Student for Sensible Drug Policy to
                     advocate for human rights and policy reform.
                   </p>
-                  <p className="px-4 text-sm font-extralight text-gray-950 mt-2">
+                  <p className="px-4 text-sm  font-extralight text-gray-950 mt-2">
                     {" "}
                     Kamil's leadership extends beyond borders, as evidenced by
                     his involvement in global initiatives such as the Millennium

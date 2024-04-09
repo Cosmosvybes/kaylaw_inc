@@ -8,6 +8,7 @@ import {
   DocumentText,
   ArrowBack,
 } from "react-huge-icons/outline";
+import ceo from '../assets/Kaylaw.jpg';
 import { useState } from "react";
 const Nav = () => {
   const [openNAv, setOpenNAv] = useState(false);
@@ -17,13 +18,13 @@ const Nav = () => {
 
   return (
     <>
-      <div className="flex justify-between relative bg-sky-500  items-center py-1  px-3 max-sm:px-0">
+      <div className="flex justify-between  relative bg-sky-500  items-center py-1  px-5 max-sm:px-0">
+        <img src={ceo} className="w-10 h-10 object-cover rounded-full ml-1" />
         <h1 className="text-2xl font-extrabold  text-gray-100 px-2 py-1">
-          <span className="border-2 border-white rounded-md text-gray-100 px-1 mr-1">
+          <span className="border border-gray-300 rounded-xl text-gray-100  mr-1 px-2">
             {" "}
-            kamil{" "}
+            Kamil Lawal
           </span>{" "}
-          Lawal
         </h1>
         <div className="flex justify-around gap-1 max-sm:hidden">
           <Link
