@@ -15,7 +15,7 @@ const Ceo = () => {
   return (
     <>
       <section id="about">
-        <div className="flex justify-around h-auto  max-sm:items-around bg-gray-100 py-5  max-sm:gap-1 ">
+        <div className="flex justify-around h-auto  max-sm:items-around bg-gray-100 max-sm:gap-1">
           <div className="flex flex-col justify-center ">
             <h1 className=" text-green-500  font-extrabold text-2xl max-sm:text-sm  px-4">
               {" "}
@@ -38,7 +38,7 @@ const Ceo = () => {
                   <h1 className=" text-green-500  font-extrabold text-xl mt-2 max-sm:text-sm  px-4">
                     About Kamil
                   </h1>
-                  <p className="px-4 text-sm font-extralight text-gray-950 mt-2">
+                  <p className="px-4 text-sm font-extralight text-gray-950 mt-1">
                     {" "}
                     Kamil Lawal is multifaceted individual with wealth of of
                     experience in leadership, education, and advocacy. His roles

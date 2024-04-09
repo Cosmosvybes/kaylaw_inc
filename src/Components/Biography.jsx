@@ -7,7 +7,7 @@ const Biography = () => {
   return (
     <>
       <section id="biography">
-        <div className="flex justify-around h-auto  max-sm:items-around bg-gray-100 py-5  max-sm:gap-2 ">
+        <div className="flex justify-around h-auto  max-sm:items-center bg-gray-100   max-sm:gap-1">
           <div
             data-aos="fade-down"
             className="relative flex-col  flex h-auto max-sm:h-auto w-96 justify-center max-sm:justify-between  max-sm:w-full rounded-md px-2"
@@ -16,7 +16,7 @@ const Biography = () => {
               {" "}
               <img
                 src={kaylaw}
-                style={{ shapeOutside: "50%" }}
+                // style={{ shapeOutside: "50%" }}
                 alt="ceo kaylaw inc"
                 className="rounded-lg object-contain w-auto  hover:bg-gray-200  h-auto max-sm:h-52 max-sm:rounded-md"
               />{" "}
@@ -116,7 +116,9 @@ const Biography = () => {
               )}
               <div className="relative px-4 py-2 w-36">
                 <button
+                  // data-aos="fade-left"
                   className="py-2 w-48 z-10  text-white rounded-md  font-medium bg-sky-500 px-2 cursor-pointer hover:bg-sky-700"
+                  // data-aos="fade-down"
                   onClick={() => setReadmore(!readmore)}
                 >
                   {readmore ? "Read less " : "Continue reading"}
