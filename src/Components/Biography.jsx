@@ -16,7 +16,7 @@ const Biography = () => {
               {" "}
               <img
                 src={kaylaw}
-                // style={{ shapeOutside: "50%" }}
+                style={{ shapeOutside: "50%" }}
                 alt="ceo kaylaw inc"
                 className="rounded-lg object-cover w-auto border hover:bg-gray-200 border-gray-300 h-auto max-sm:h-full max-sm:rounded-md"
               />{" "}
