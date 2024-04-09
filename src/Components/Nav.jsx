@@ -8,7 +8,7 @@ import {
   DocumentText,
   ArrowBack,
 } from "react-huge-icons/outline";
-import ceo from "../assets/Kaylaw.jpg"
+import ceo from "../assets/smallKay.jpg"
 import { useState } from "react";
 const Nav = () => {
   const [openNAv, setOpenNAv] = useState(false);
