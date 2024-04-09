@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ceo from "../assets/kaylaw.jpg";
+import ceo from "../assets/kay.jpeg";
 import kaylaw from "../assets/Kay4.jpeg";
 import { Button } from "react-scroll";
 const Biography = () => {
