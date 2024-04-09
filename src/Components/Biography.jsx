@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ceo from "../assets/kay.jpeg";
 import kaylaw from "../assets/Kay4.jpeg";
-import { Button } from "react-scroll";
+// import { Button } from "react-scroll";
 const Biography = () => {
   const [readmore, setReadmore] = useState(false);
   return (
@@ -10,7 +10,7 @@ const Biography = () => {
         <div className="flex justify-around h-auto  max-sm:items-around bg-gray-100 py-5  max-sm:gap-2 ">
           <div
             data-aos="fade-down"
-            className="relative flex-col  flex h-auto w-96 justify-between max-sm:justify-between  max-sm:w-full rounded-md px-2"
+            className="relative flex-col  flex h-auto max-sm:h-auto w-96 justify-center max-sm:justify-between  max-sm:w-full rounded-md px-2"
           >
             <a href={kaylaw}>
               {" "}
@@ -18,7 +18,7 @@ const Biography = () => {
                 src={kaylaw}
                 style={{ shapeOutside: "50%" }}
                 alt="ceo kaylaw inc"
-                className="rounded-lg object-cover w-auto border hover:bg-gray-200 border-gray-300 h-auto max-sm:h-full max-sm:rounded-md"
+                className="rounded-lg object-contain w-auto  hover:bg-gray-200  h-auto max-sm:h-52 max-sm:rounded-md"
               />{" "}
             </a>
             <a href={ceo} className="hidden max-sm:block">
@@ -27,7 +27,7 @@ const Biography = () => {
                 src={ceo}
                 // style={{ shapeOutside: "50%" }}
                 alt="ceo kaylaw inc"
-                className="  rounded-md w-auto border hover:bg-gray-200 max-sm:h-full object-cover border-gray-300  h-auto max-sm:rounded-md"
+                className="  rounded-md w-auto  hover:bg-gray-200 max-sm:h-52 object-contain   h-full max-sm:rounded-md"
               />{" "}
             </a>
           </div>
@@ -80,7 +80,7 @@ const Biography = () => {
                     Representative and later ascending to the position of
                     President of Education at York St. John University student
                     Union. In this role he leads a team responsible for over{" "}
-                    <b className="text-sm text-gray-600 font-bold">10,000</b> students, ensuring their voices are heard and
+                    <b className="text-sm text-sky-500 font-bold">10,000</b> students, ensuring their voices are heard and
                     their needs are addressed within the academic community.
                     Kamil's strategic vision and collaborative approach have
                     resulted in the succesful management of academic
@@ -115,12 +115,12 @@ const Biography = () => {
                 </div>
               )}
               <div className="relative px-4 py-2 w-36">
-                <Button
+                <button
                   className="py-2 w-48 z-10  text-white rounded-md  font-medium bg-sky-500 px-2 cursor-pointer hover:bg-sky-700"
                   onClick={() => setReadmore(!readmore)}
                 >
                   {readmore ? "Read less " : "Continue reading"}
-                </Button>
+                </button>
               </div>
             </div>
           </div>

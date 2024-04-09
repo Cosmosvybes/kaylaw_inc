@@ -1,4 +1,4 @@
-import { Button } from "react-scroll";
+// import { button } from "react-scroll";
 import ceo from "../assets/kaylaw2.jpeg";
 import kay from "../assets/kamil3.jpeg";
 import Aos from "aos";
@@ -89,13 +89,13 @@ const Ceo = () => {
                 </div>
               )}
               <div className="relative px-4 py-2 w-36">
-                <Button
+                <button
                   to="/"
                   className="py-2 w-48 z-10 text-white rounded-md  font-medium bg-green-500 px-2 cursor-pointer hover:bg-green-700"
                   onClick={() => setReadmore(!readmore)}
                 >
                   {readmore ? "Read less " : "Continue reading"}
-                </Button>
+                </button>
               </div>
             </div>
           </div>
@@ -110,7 +110,7 @@ const Ceo = () => {
                 src={ceo}
                 // style={{ shapeOutside: "50%" }}
                 alt="ceo kaylaw inc"
-                className="relative flex-col  object-cover  flex h-auto w-96 justify-between max-sm:justify-center  max-sm:w-full rounded-lg  py-2 px-2 max-sm:rounded-xl"
+                className="relative flex-col  object-contain  flex h-auto w-96 justify-between max-sm:justify-center  max-sm:w-auto rounded-lg max-sm:h-52  py-2 px-2 max-sm:rounded-xl"
               />{" "}
             </a>
             <a href={kay} className="hidden max-sm:block">
@@ -119,7 +119,7 @@ const Ceo = () => {
                 src={kay}
                 // style={{ shapeOutside: "50%" }}
                 alt="ceo kaylaw inc"
-                className="relative flex-col  flex h-auto w-96 object-cover justify-between max-sm:justify-center  max-sm:w-full rounded-lg  py-2 px-2  max-sm:rounded-xl "
+                className="relative flex-col  flex h-auto w-96 object-contain justify-between max-sm:justify-center  max-sm:h-52  max-sm:w-auto rounded-lg  py-2 px-2  max-sm:rounded-xl "
               />{" "}
             </a>
           </div>

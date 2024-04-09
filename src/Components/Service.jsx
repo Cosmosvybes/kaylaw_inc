@@ -9,11 +9,11 @@ import clip4 from "../assets/WhatsApp Video 2024-03-02 at 1.19.44 PM.mp4";
 const Service = () => {
   return (
     <>
-      <section className="bg-gray-100 px-30 ">
-        <h1 className="text-sky-500 font-extrabold text-start px-36 text-2xl max-sm:text-sm max-sm:px-4  py-2 ">
+      <section className="bg-gray-100 px-30 max-lg:px-4 ">
+        <h1 className="text-sky-500 font-extrabold text-start px-36 max-lg:px-4  text-2xl max-sm:text-sm max-sm:px-4  py-2 ">
           PICTURES
         </h1>
-        <div className="grid grid-cols-4 px-36 max-sm:grid-cols-2 gap-3  max-sm:px-4 py-1 mt-3">
+        <div className="grid grid-cols-4 max-md:grid-cols-2 max-md:px-4 px-36 max-sm:grid-cols-2 max-lg:grid-cols-2 max-lg:gap-5 gap-3  max-sm:px-4 py-1 mt-3">
           <div className="ralative flex flex-col justify-center items-center h-52 border  border-gray-300 w-60 max-sm:h-auto max-sm:w-auto rounded-md bg-gray-200">
             <a href={image1}>
               <img
@@ -54,7 +54,7 @@ const Service = () => {
             </a>
           </div>
         </div>
-        <h1 className="text-sky-500 font-extrabold text-start px-36 text-2xl max-sm:text-sm   max-sm:px-4  py-2 ">
+        <h1 className="text-sky-500 font-extrabold text-start px-36  max-lg:px-4 max-lg:py-4  text-2xl max-sm:text-sm   max-sm:px-4  py-2 ">
           VIDEOS
         </h1>
 
@@ -74,7 +74,7 @@ const Service = () => {
           </div>
           <div
             data-aos="fade-up"
-            className="ralative flex flex-col justify-center items-center border border-gray-306 w-66 h-56 max-sm:h-52 max-sm:w-auto rounded-md bg-gray-200"
+            className="ralative flex flex-col justify-center items-center border border-gray-300 w-66 h-56 max-sm:h-52 max-sm:w-auto rounded-md bg-gray-200"
           >
             <video
               src={clip1}
