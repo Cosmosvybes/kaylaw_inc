@@ -7,7 +7,7 @@ const Biography = () => {
   return (
     <>
       <section id="biography">
-        <div className="flex justify-around h-auto  max-sm:items-center bg-gray-100   max-sm:gap-1">
+        <div className="flex justify-around h-auto  max-sm:items-around bg-gray-100   max-sm:gap-1">
           <div
             data-aos="fade-down"
             className="relative flex-col  flex h-auto max-sm:h-auto w-96 justify-center max-sm:justify-between  max-sm:w-full rounded-md px-2"
