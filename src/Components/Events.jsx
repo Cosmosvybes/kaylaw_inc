@@ -10,6 +10,7 @@ import {
 import Post from "./Post";
 import gsap from "gsap";
 // import e from "express";
+import image from "../assets/kay5.jpeg";
 const Events = () => {
   const [switcher, setSwitch] = useState(false);
   let [events, setEvents] = useState([
@@ -19,6 +20,7 @@ const Events = () => {
       date: new Date().toUTCString(),
       category: "Past events",
       title: "Engagement",
+      image: image,
     },
     {
       id: 2,
@@ -26,6 +28,7 @@ const Events = () => {
       date: new Date().toUTCString(),
       category: "Positive news",
       title: "Symposium Education",
+      image: image,
     },
     {
       id: 3,
@@ -33,6 +36,7 @@ const Events = () => {
       date: new Date().toUTCString(),
       category: "Presentation",
       title: "OOPL",
+      image: image,
     },
     {
       id: 5,
@@ -40,6 +44,7 @@ const Events = () => {
       date: new Date().toUTCString(),
       category: "Positive news",
       title: "Abokuta Summit",
+      image: image,
     },
     {
       id: 7,
@@ -47,9 +52,9 @@ const Events = () => {
       date: new Date().toUTCString(),
       category: "Engagement",
       title: "Immigration Aide",
+      image: image,
     },
   ]);
-  
 
   const handleSwitch = () => {
     setSwitch(!switcher);
@@ -113,6 +118,7 @@ const Events = () => {
               .map((event) => (
                 <div className="" key={event.id}>
                   <Post
+                    picture={event.image}
                     post={event.post}
                     title={event.title}
                     date={event.date}
