@@ -98,10 +98,10 @@ const Events = () => {
         </h1>
         {!switcher && (
           <div className="flex justify-end items-center mr-2  ">
-            <FilterThreeLineHorizontal className="text-sky-500 " />
+            <FilterThreeLineHorizontal className="text-gray-500 " />
             <select
               id="event"
-              className="ml-2 outline-gray-100 border shadow-inner text-xs py-1 shadow-gray-300 border-gray-200 rounded-sm text-sky-500"
+              className="ml-2 outline-gray-100 border text-xs py-2 bg-gray-100 border-gray-200 rounded-lg text-black"
               onChange={handleFilter}
             >
               <option>Presentation</option>
@@ -133,18 +133,18 @@ const Events = () => {
           </div>
         ) : (
           <div className="flex flex-col relative mt-2 ">
-            <div className="flex flex-start flex-col-reverse">
+            <div className="flex flex-between gap-2">
               <input
                 type="text"
                 placeholder="Post title"
                 value={postTitle}
                 onChange={(e) => setTitle(e.target.value)}
-                className="outline-sky-500 border border-gray-300 w-52 max-sm:w-40 px-2 py-2 rounded-md mb-1"
+                className="outline-sky-500 border border-gray-300 w-52 max-sm:w-auto px-2 py-2 rounded-md mb-1"
               />
 
               <select
                 id="postCategory"
-                className="block rounded-md w-52 max-sm:w-40 border border-gray-300 mb-1"
+                className="block rounded-md w-52 max-sm:w-auto border text-xs text-gray-500 py-2 border-gray-300 mb-1"
               >
                 <option>Presentation</option>
                 <option>Engagement</option>

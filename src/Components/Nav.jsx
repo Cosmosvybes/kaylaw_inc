@@ -62,7 +62,7 @@ const Nav = () => {
           </a>
         </div>
         <MenuLineHorizontalHalf
-          className="text-4xl text-white hidden max-sm:inline"
+          className="text-4xl text-white hidden max-sm:inline mr-3"
           onClick={handleOpenNav}
         />
 
