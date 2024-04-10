@@ -49,6 +49,7 @@ const Events = () => {
       title: "Immigration Aide",
     },
   ]);
+  
 
   const handleSwitch = () => {
     setSwitch(!switcher);
@@ -59,7 +60,16 @@ const Events = () => {
   //handle create post
   const submitPost = (e) => {
     e.preventDefault();
-    console.log({ post, postTitle });
+    const postcategory = document.querySelector("#postCategory");
+    let categoryChoice = postcategory.options[postcategory.selectedIndex].value;
+    let postData = {
+      id: Date.now(),
+      post: post,
+      title: postTitle,
+      category: categoryChoice,
+      date: new Date().toUTCString(),
+    };
+    setEvents([...events, postData]);
   };
 
   const handleFilter = () => {
@@ -73,7 +83,7 @@ const Events = () => {
   return (
     <>
       <ArrowBack
-        className="text-2xl ml-2 mt-1 text-sky-500"
+        className="text-2xl ml-4 mt-1 text-sky-500"
         onClick={() => history.back()}
       />
       <section className="h-screen px-44 max-sm:px-1">
@@ -97,7 +107,7 @@ const Events = () => {
         )}
 
         {!switcher ? (
-          <div className="grid grid-cols-3 max-sm:grid-cols-1 max-lg:grid-cols-2 relative gap-2 py-2 px-2  ">
+          <div className="grid grid-cols-3  max-sm:grid-cols-1 max-lg:grid-cols-2 relative gap-2 py-2 px-2  ">
             {events
               .filter((event) => event.category == eventCategory)
               .map((event) => (
@@ -126,7 +136,10 @@ const Events = () => {
                 className="outline-sky-500 border border-gray-300 w-52 max-sm:w-40 px-2 py-2 rounded-md mb-1"
               />
 
-              <select className="block rounded-md w-52 max-sm:w-40 border border-gray-300 mb-1">
+              <select
+                id="postCategory"
+                className="block rounded-md w-52 max-sm:w-40 border border-gray-300 mb-1"
+              >
                 <option>Presentation</option>
                 <option>Engagement</option>
                 <option>Positive news</option>
@@ -138,7 +151,7 @@ const Events = () => {
               onChange={(e) => setPost(e.target.value)}
               className="border border-gray-300 w-full rounded-md h-96 text-xs outline-sky-600 px-2 py-2"
             ></textarea>
-            <div className="flex justify-between items-center mt-3">
+            <div className="flex justify-between items-center mt-3 px-3">
               <div className="flex justify-around gap-3 items-center">
                 <UploadRectangle className="text-3xl text-sky-500" />
                 <SendFast
