@@ -1,23 +1,13 @@
-import { useState } from "react";
-import {
-  Biography,
-  Ceo,
-  Footer,
-  Header,
-  Nav,
-  Service,
-  Social,
-} from "./Components";
+import { Route, Router, Routes } from "react-router-dom";
+import { Header } from "./Components";
+import Events from "./Components/Events";
 function App() {
   return (
     <>
-      <Nav />
-      <Header />
-      <Ceo />
-      <Biography />
-      <Service />
-      <Social />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Header />}></Route>
+        <Route path="/activities" element={<Events />}></Route>
+      </Routes>
     </>
   );
 }

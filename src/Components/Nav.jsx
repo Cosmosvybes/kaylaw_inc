@@ -1,4 +1,5 @@
 import { Link } from "react-scroll";
+// import { Link as link } from "react-router-dom";
 import cv from "../assets/Kamil LawalCV.pdf";
 import {
   Information,
@@ -8,8 +9,9 @@ import {
   DocumentText,
   ArrowBack,
 } from "react-huge-icons/outline";
-import ceo from "../assets/smallKay.jpg"
+import ceo from "../assets/smallKay.jpg";
 import { useState } from "react";
+import ActivityNav from "./ActivityNav";
 const Nav = () => {
   const [openNAv, setOpenNAv] = useState(false);
   const handleOpenNav = () => {
@@ -49,6 +51,7 @@ const Nav = () => {
             {" "}
             <CallUser className="inline " /> Contact me
           </Link>
+          <ActivityNav />
           <a
             href={cv}
             download={cv}
@@ -97,7 +100,8 @@ const Nav = () => {
               {" "}
               <CallUser className="inline  text-2xl" /> Connect
             </Link>
-            {/* <Link > */}{" "}
+            <ActivityNav />
+
             <a
               href={cv}
               download={cv}

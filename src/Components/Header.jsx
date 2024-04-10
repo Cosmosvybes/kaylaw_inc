@@ -4,6 +4,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import gsap from "gsap";
 import { useEffect } from "react";
+import Ceo from "./Ceo";
+import Biography from "./Biography";
+import Service from "./Service";
+import Social from "./Social";
+import Footer from "./Footer";
+import Nav from "./Nav";
 const Header = () => {
   const handleOpenNav = () => {
     setOpenNAv(!openNAv);
@@ -31,6 +37,7 @@ const Header = () => {
 
   return (
     <>
+      <Nav />
       <div
         className="flex h-screen max-sm:h-96  max-sm:bg-contain justify-center items-center flex-col max-sm:justify-start max-sm:py-10"
         style={{
@@ -78,6 +85,13 @@ const Header = () => {
           Administration.
         </p>
       </div>
+      {/* 
+      <Header /> */}
+      <Ceo />
+      <Biography />
+      <Service />
+      <Social />
+      <Footer />
     </>
   );
 };
