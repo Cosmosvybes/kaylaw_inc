@@ -62,9 +62,11 @@ const Events = () => {
   const [eventCategory, setCategory] = useState("Positive news");
   const [post, setPost] = useState("");
   const [postTitle, setTitle] = useState("");
+  const [postImage, setPostImage] = useState(null);
   //handle create post
   const submitPost = (e) => {
     e.preventDefault();
+    if (!post || !postTitle) return;
     const postcategory = document.querySelector("#postCategory");
     let categoryChoice = postcategory.options[postcategory.selectedIndex].value;
     let postData = {
@@ -73,35 +75,50 @@ const Events = () => {
       title: postTitle,
       category: categoryChoice,
       date: new Date().toUTCString(),
+      image: postImage,
     };
     setEvents([...events, postData]);
+    setSwitch(!switcher);
+  };
+
+  //handleDeletePost
+  const handleDeletePost = (id) => {
+    setEvents(events.filter((event) => event.id != id));
   };
 
   const handleFilter = () => {
     const param = document.querySelector("#event");
     let eventValue = param.options[param.selectedIndex].value;
     setCategory(eventValue);
-    console.log(eventValue);
     gsap.fromTo("div", { opacity: 0 }, { opacity: 1, duration: 1 });
+  };
+
+  let [imagePreview, setPreview] = useState(null);
+  // imageUpload
+  const handleImageUpload = (e) => {
+    let imageFile = e.target.files[0];
+    let ImageUrl = URL.createObjectURL(imageFile);
+    setPostImage(ImageUrl);
+    setPreview(ImageUrl);
   };
 
   return (
     <>
       <ArrowBack
-        className="text-2xl ml-4 mt-1 text-sky-500"
+        className="text-2xl ml-4 mt-1 text-sky-500 text-light"
         onClick={() => history.back()}
       />
       <section className="h-screen px-44 max-sm:px-1">
-        <h1 className="text-sky-500 text-2xl ml-2 text-left font-bold">
+        <h1 className="text-sky-500 text-2xl ml-2 text-left font-light">
           {" "}
-          Activities
+          My Activities
         </h1>
         {!switcher && (
           <div className="flex justify-end items-center mr-2  ">
             <FilterThreeLineHorizontal className="text-gray-500 " />
             <select
               id="event"
-              className="ml-2 outline-gray-100 border text-xs py-2 bg-gray-100 border-gray-200 rounded-lg text-black"
+              className="ml-2 outline-gray-100 border text-xs py-2 bg-gray-100 border-gray-200 rounded-full px-2 text-black"
               onChange={handleFilter}
             >
               <option>Presentation</option>
@@ -113,18 +130,26 @@ const Events = () => {
 
         {!switcher ? (
           <div className="grid grid-cols-3  max-sm:grid-cols-1 max-lg:grid-cols-2 relative gap-2 py-2 px-2  ">
-            {events
-              .filter((event) => event.category == eventCategory)
-              .map((event) => (
-                <div className="" key={event.id}>
-                  <Post
-                    picture={event.image}
-                    post={event.post}
-                    title={event.title}
-                    date={event.date}
-                  />
-                </div>
-              ))}
+            {events.filter((event) => event.category == eventCategory).length ==
+            0 ? (
+              <p className="text-xs text-gray-500">This category is empty</p>
+            ) : (
+              events
+                .filter((event) => event.category == eventCategory)
+                .map((event) => (
+                  <div className="" key={event.id}>
+                    <Post
+                      picture={event.image}
+                      post={event.post}
+                      title={event.title}
+                      date={event.date}
+                      id={event.id}
+                      deletePost={handleDeletePost}
+                      canDelete={true}
+                    />
+                  </div>
+                ))
+            )}
 
             <PlusThin
               className="fixed bottom-0  right-0 text-7xl text-sky-500 mr-20 mb-24 max-sm:mb-20 max-sm:mr-4 z-10 "
@@ -151,7 +176,12 @@ const Events = () => {
                 <option>Positive news</option>
               </select>
             </div>
-
+            {imagePreview && (
+              <img
+                src={imagePreview}
+                className="w-52 h-52 object-cover max-sm:w-full mb-1"
+              />
+            )}
             <textarea
               value={post}
               onChange={(e) => setPost(e.target.value)}
@@ -159,7 +189,17 @@ const Events = () => {
             ></textarea>
             <div className="flex justify-between items-center mt-3 px-3">
               <div className="flex justify-around gap-3 items-center">
-                <UploadRectangle className="text-3xl text-sky-500" />
+                <input
+                  type="file"
+                  onChange={handleImageUpload}
+                  id="imageFile"
+                  className="hidden"
+                />
+                <label htmlFor="imageFile">
+                  {" "}
+                  <UploadRectangle className="text-3xl text-sky-500" />
+                </label>
+
                 <SendFast
                   onClick={submitPost}
                   className="text-3xl text-green-500"

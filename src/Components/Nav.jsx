@@ -51,7 +51,9 @@ const Nav = () => {
             {" "}
             <CallUser className="inline " /> Contact me
           </Link>
-          <ActivityNav />
+          <ActivityNav route={"activities"} routeName={"Activities"} />
+          <ActivityNav route={"events"} routeName={"Kamil's Event"} />
+
           <a
             href={cv}
             download={cv}
@@ -100,8 +102,10 @@ const Nav = () => {
               {" "}
               <CallUser className="inline  text-2xl" /> Connect
             </Link>
-            <ActivityNav />
-
+            <ActivityNav route={"events"} routeName={"Kamil's Event"} />
+            {true && (
+              <ActivityNav route={"activities"} routeName={"Activities"} />
+            )}
             <a
               href={cv}
               download={cv}

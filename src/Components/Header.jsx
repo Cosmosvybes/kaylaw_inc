@@ -66,7 +66,7 @@ const Header = () => {
           to="contact"
           id="btn"
           smooth={true}
-          className="h-30  py-3 cursor-pointer max-sm:mt-20 mt-5 text-white font-semibold  border border-sky-500 w-72 max-sm:w-52 hover:bg-sky-400 rounded-md text-center shadow-inner shadow-sky-400 "
+          className="h-30  py-3 cursor-pointer max-sm:mt-32 mt-5 text-white font-semibold  border border-sky-500 w-72 max-sm:w-52 hover:bg-sky-400 rounded-md text-center shadow-inner shadow-sky-400 "
         >
           Connect with Kamil
         </Link>
@@ -85,8 +85,7 @@ const Header = () => {
           Administration.
         </p>
       </div>
-      {/* 
-      <Header /> */}
+      
       <Ceo />
       <Biography />
       <Service />
