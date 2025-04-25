@@ -6,9 +6,10 @@ const ActivityNav = ({ route, routeName }) => {
     <>
       <Link
         to={`/${route}`}
-        className="border z-10 font-semibold  border-white rounded-md text-center text-white px-2  flex justify-center items-center max-sm:py-2 cursor-pointer hover:bg-gray-100 hover:text-sky-500"
+        className=" rounded-md text-gray-600 px-1 cursor-pointer  text-2xl font-semibold flex items-center justify-start  hover:text-blue-900"
       >
-        <Activity className="inline text-xl" />
+
+        {/* <Activity className="inline text-xl" /> */}
         {" "} {routeName}
       </Link>
     </>

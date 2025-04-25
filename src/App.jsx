@@ -1,4 +1,4 @@
-import { Route, Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { Header } from "./Components";
 import Events from "./Components/Events";
 import KamilEvents from "./Components/KamilEvents";

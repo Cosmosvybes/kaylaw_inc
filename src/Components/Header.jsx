@@ -1,91 +1,91 @@
 import { Button, Link } from "react-scroll";
-import bg from "../assets/bg.jpeg";
-import AOS from "aos";
+import bg from "../assets/coolbackgrounds-particles-stellar.png";
+// import AOS from "aos";
 import "aos/dist/aos.css";
-import gsap from "gsap";
-import { useEffect } from "react";
+// import gsap from "gsap";
+// import { useEffect } from "react";
 import Ceo from "./Ceo";
 import Biography from "./Biography";
 import Service from "./Service";
 import Social from "./Social";
 import Footer from "./Footer";
-import Nav from "./Nav";
+// import Nav from "./Nav";
 const Header = () => {
   const handleOpenNav = () => {
     setOpenNAv(!openNAv);
   };
-  useEffect(() => {
-    gsap.fromTo(
-      "#btn",
-      { opacity: 0, scale: 0 },
-      {
-        opacity: 1,
-        yoyo: true,
-        scale: 1,
-        repeat: -1,
-        duration: 2,
-        ease: "power2.inOut",
-      }
-    );
-    AOS.init({
-      offset: 200,
-      duration: 600,
-      easing: "ease-in-out-sine",
-      delay: 100,
-    });
-  }, []);
+  // useEffect(() => {
+  //   gsap.fromTo(
+  //     "#btn",
+  //     { opacity: 0, scale: 0 },
+  //     {
+  //       opacity: 1,
+  //       yoyo: true,
+  //       scale: 1,
+  //       repeat: -1,
+  //       duration: 2,
+  //       ease: "power2.inOut",
+  //     }
+  //   );
+  //   AOS.init({
+  //     offset: 200,
+  //     duration: 600,
+  //     easing: "ease-in-out-sine",
+  //     delay: 100,
+  //   });
+  // }, []);
 
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
       <div
-        className="flex h-screen max-sm:h-screen  max-sm:bg-contain justify-center items-center flex-col max-sm:justify-center max-sm:py-10"
+        className="flex h-screen max-sm:h-screen    max-sm:bg-contain justify-start items-center  max-sm:justify-center max-sm:py-10"
         style={{
           backgroundImage: `url(${bg})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
       >
-        <h1
-          // data-aos="fade-down"
-          className="text-8xl text-gray-100 max-sm:text-2xl font-extrabold"
-        >
-          {" "}
-          KAMIL LAWAL
-        </h1>
-        {/* <div className="flex w-96 flex-col"> */}
-        <p className="text-xl py-3 text-white font-semibold max-sm:font-light max-sm:text-center">
-          Welcome to Kamil Lawal Official Website.
-        </p>
-        <p className="text-center text-xl  max-sm:text-sm font-semibold max-sm:font-semibold text-white px-10 max-sm:px-5 ">
-          You are welcome to Kamil Lawal Official Website, on this page you can
-          read more about Kamil and his activities.
-        </p>
+        <div className="relative w-1/2 max-sm:w-full h-3/4  max-sm:h-auto p-10 flex justify-center max-sm:p-4 max-sm:items-start  gap-5 flex-col  ">
+          <h1 className="text-[24px] font-bold text-white">HELLO, I'M</h1>
+          <h1 className="text-4xl text-gray-100 max-sm:text-2xl font-extrabold mt-2">
+            {" "}KAMIL LAWAL
+          </h1>
+          <p className="text-gray-500 font-semibold text-xl">ENTREPRENUER.</p>
 
-        <Link
-          to="contact"
-          id="btn"
-          smooth={true}
-          className="h-30  py-3 cursor-pointer max-sm:mt-10 mt-5 text-white font-semibold  border border-sky-500 w-72 max-sm:w-52 hover:bg-sky-400 rounded-md text-center shadow-inner shadow-sky-400 "
+
+          <p className="text-xl  text-white max-sm:font-light max-sm:text-center line-clamp-6 text-pretty mt-5">
+            This page offers a closer look at Kamil Lawal—his background, interests, and the meaningful work he's engaged in. From personal projects to professional achievements, you'll find insights into his journey, passions, and ongoing contributions in various fields. Whether you're here to connect, collaborate, or simply learn more, you're in the right place.
+          </p>
+
+          <div className="relative w-full flex justify-start max-sm:flex-col items-center gap-2">
+            <button className="p-4 h-14 w-1/4 max-sm:w-full  text-[20px] rounded-md bg-blue-900 text-white font-bold text-center hover:bg-blue-950 transition-all duration-500">VIEW CV</button>
+            <button onClick={() => alert("ok")} className="p-4 h-14  max-sm:w-full w-1/4 rounded-md text-[20px] bg-white text-blue-900 font-bold text-center  hover:bg-blue-950 transition-all duration-500">LET'S CONNECT</button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div className="relative flex flex-col justify-center items-center">
+        <div
+
+          className="flex h-[24rem] w-3/4 max-sm:w-full justify-center py-2 max-sm:py-2 px-10 max-sm:px-5 flex-col  "
         >
-          Connect with Kamil
-        </Link>
+          <div className="relative bg-blue-900 p-4 rounded-full">
+            <h1 className=" text-white font-extrabold text-4xl  text-center max-sm:text-sm">
+              WHO IS KAMIL LAWAL ?
+            </h1>  </div>
+          <p className="px-4 text-4xl max-sm:text-xl font-bold  text-center mt-4  text-blue-950  rounded-md py-3">
+            A dedicated leader with a proven track record of driving positive
+            change in academic, social, and community settings. With a strong
+            background in computer science and a Master's in Business
+            Administration.
+          </p>
+        </div>
       </div>
-      <div
-        // data-aos="fade-down"
-        className="flex h-52 justify-center py-2 max-sm:py-2 px-10 max-sm:px-5 flex-col bg-gray-100 "
-      >
-        <h1 className=" text-sky-500 font-extrabold text-2xl  text-center max-sm:text-sm">
-          WHO IS KAMIL LAWAL ?
-        </h1>
-        <p className="px-4  text-center font-extralight text-gray-950 text-sm border border-gray-200 rounded-md py-3">
-          A dedicated leader with a proven track record of driving positive
-          change in academic, social, and community settings. With a strong
-          background in computer science and a Master's in Business
-          Administration.
-        </p>
-      </div>
-      
+
+
       <Ceo />
       <Biography />
       <Service />

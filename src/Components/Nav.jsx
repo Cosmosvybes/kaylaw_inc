@@ -8,72 +8,126 @@ import {
   MenuLineHorizontalHalf,
   DocumentText,
   ArrowBack,
+  User,
+  MenuLineHorizontal,
+  RemoveRectangle,
 } from "react-huge-icons/outline";
 import ceo from "../assets/smallKay.jpg";
 import { useState } from "react";
 import ActivityNav from "./ActivityNav";
 const Nav = () => {
-  const [openNAv, setOpenNAv] = useState(false);
+  const [openNav, setOpenNAv] = useState(false);
   const handleOpenNav = () => {
-    setOpenNAv(!openNAv);
+    setOpenNAv(!openNav);
   };
 
   return (
     <>
-      <div className="flex justify-between  relative bg-sky-500  items-center py-1  px-5 max-sm:px-0">
-        <img src={ceo} className="w-10 h-10 object-cover rounded-full ml-1" />
-        <h1 className="text-2xl font-extrabold  text-gray-100 px-2 py-1">
-          <span className="border font-thin border-gray-300 rounded-xl bg-cyan-600 text-gray-100  mr-1 px-2">
-            {" "}
-            Kamil Lawal
-          </span>{" "}
-        </h1>
-        <div className="flex justify-around gap-1 max-sm:hidden">
+      <div className="flex justify-between sticky top-0 left-0  z-10 right-0 bg-gray-50 p-10 h-[7rem] max-sm:h-[4rem] flex-row  items-center   max-sm:px-2">
+
+
+        <div className="relative w-1/2 p-3 max-sm:p-1 h-auto hover:bg-red-500 bg-blue-900 rounded-full">
+          <div className="relative  flex justify-start items-center   w-1/2 max-sm:w-full">
+            <div className="rounded-full p-2    flex justify-center items-center  bg-blue-950 ">
+              <img onClick={() => alert("okay")} src={ceo} className="w-14 h-14 max-sm:h-10 max-sm:w-10 object-cover rounded-full" /></div>
+            <h1 className="  px-2 text-gray-50 text-5xl max-sm:text-xl font-extrabold py-1">
+              KAYLAW
+
+            </h1> </div>
+        </div>
+
+        <nav className="flex h-auto justify-around gap-2 max-sm:hidden">
           <Link
             to="about"
             smooth={true}
-            className="border z-10 border-white rounded-md text-white px-1 cursor-pointer hover:bg-gray-100 hover:text-sky-500"
+            className=" rounded-md text-blue-900 px-1 cursor-pointer font-semibold flex items-center text-2xl justify-start  hover:text-blue-600"
           >
-            <UserBlock className="inline " /> About me
+            ABOUT ME
           </Link>
           <Link
             to="biography"
             smooth={true}
-            className="border z-10 border-white rounded-md text-white px-1 cursor-pointer hover:bg-gray-100 hover:text-sky-500"
+            className=" rounded-md text-blue-900 px-1 cursor-pointer font-semibold flex items-center text-2xl  justify-start  hover:text-blue-600"
           >
-            <Information className="inline" /> Biography
+            BIOGRAPHY
           </Link>
           <Link
-            to="contact"
-            smooth={true}
-            className="border z-10 border-white rounded-md text-white px-1 cursor-pointer hover:bg-gray-100 hover:text-sky-500"
+            className=" rounded-md text-blue-900 px-1 cursor-pointer font-semibold flex items-center  text-2xl justify-start  hover:text-blue-600"
           >
+
+
             {" "}
-            <CallUser className="inline " /> Contact me
+            CONTACT ME
           </Link>
-          <ActivityNav route={"activities"} routeName={"Activities"} />
-          <ActivityNav route={"events"} routeName={"Kamil's Event"} />
+          <ActivityNav route={"activities"} routeName={"ACTIVITIES"} />
+          <ActivityNav route={"events"} routeName={"UPDATES"} />
 
           <a
             href={cv}
             download={cv}
-            className="border  border-white rounded-md text-white px-1 cursor-pointer hover:bg-sky-100 hover:text-sky-500"
+            className=" rounded-md text-blue-900 px-1 cursor-pointer font-semibold flex items-center  text-2xl justify-start  hover:text-blue-600"
           >
             {" "}
-            <DocumentText className="inline  text-xl " /> cv{" "}
+            CV{" "}
           </a>
-        </div>
-        <MenuLineHorizontalHalf
-          className="text-4xl text-white hidden max-sm:inline mr-3"
+        </nav>
+        <MenuLineHorizontal
+          className="text-4xl text-blue-900 hidden max-sm:inline mr-3"
           onClick={handleOpenNav}
         />
 
-        <div
+        {openNav && <div className="h-screen w-full backdrop-blur-sm transition-all duration-500  fixed flex justify-center items-center p-4 left-0 right-0 top-0 bg-[rgba(0,0,0,0.5)]">
+          <RemoveRectangle className="text-3xl text-red-500 absolute right-2 top-2" onClick={handleOpenNav} />
+          <div className="relative bg-white w-full flex justify-center items-center flex-col rounded-lg shadow">
+            <Link
+              to="about"
+              smooth={true}
+              onClick={handleOpenNav}
+              className=" rounded-md font-semibold text-blue-900 px-1 py-2  text-2xl text-center cursor-pointer  hover:text-blue-600"
+            >
+              ABOUT ME
+            </Link>
+            <Link
+              to="biography"
+              smooth={true}
+              onClick={handleOpenNav}
+              className=" rounded-md font-semibold text-blue-900 px-1 py-2  text-2xl text-center cursor-pointer  hover:text-blue-600"
+            >
+              BIOGRAPHY
+            </Link>
+            <Link
+              to="contact"
+              smooth={true}
+              onClick={handleOpenNav}
+              className="b rounded-md font-semibold   text-2xl py-2 text-center text-blue-900 px-1 cursor-pointer  hover:text-blue-600"
+            >
+              {" "}
+              LET'S CONNECT
+            </Link>
+            <hr className="border-t border-blue-950  w-full mt-1 mb-1"/>
+            <ActivityNav route={"events"} routeName={"EVENT's"} />
+           
+            {true && (
+              <ActivityNav route={"activities"} routeName={"UPDATES"} />
+            )}
+            <a
+              href={cv}
+              download={cv}
+              className="b rounded-md font-semibold  py-2 text-center text-blue-900 px-1 cursor-pointer  hover:text-blue-600"
+            >
+              {" "}
+              DOWNLOAD  CV
+            </a>
+          </div>
+
+        </div>}
+
+        {/* <div
           className="flex flex-col h-screen absolute bg-sky-500 w-full top-0 items-center justify-start py-16"
           style={{ opacity: !openNAv ? 0 : 1, transition: "0.7s" }}
         >
           <ArrowBack
-            className="absolute right-2 top-2 text-white text-2xl "
+            className="absolute right-2 top-2 text-blue-900 text-2xl "
             onClick={handleOpenNav}
           />
           <div className="flex justify-around gap-1 flex-col">
@@ -81,42 +135,42 @@ const Nav = () => {
               to="about"
               smooth={true}
               onClick={handleOpenNav}
-              className="border w-40 border-white rounded-md font-semibold text-white px-1 py-2 text-center cursor-pointer hover:bg-gray-100 hover:text-sky-500"
+              className=" rounded-md font-semibold text-blue-900 px-1 py-2  text-2xl text-center cursor-pointer  hover:text-blue-600"
             >
-              <UserBlock className="inline text-2xl " /> About me
+              <UserBlock className="inline text-2xl " /> ABOUT ME
             </Link>
             <Link
               to="biography"
               smooth={true}
               onClick={handleOpenNav}
-              className="border  w-40 border-white rounded-md font-semibold  py-2 text-center text-white px-1 cursor-pointer hover:bg-gray-100 hover:text-sky-500"
+              className="  rounded-md font-semibold  py-2 text-center text-blue-900 px-1 cursor-pointer  hover:text-blue-600"
             >
-              <Information className="inline text-2xl" /> Biography
+              <Information className="inline text-2xl" /> BIOGRAPHY
             </Link>
             <Link
               to="contact"
               smooth={true}
               onClick={handleOpenNav}
-              className="border border-white rounded-md font-semibold  py-2 text-center text-white px-1 cursor-pointer hover:bg-gray-100 hover:text-sky-500"
+              className="b rounded-md font-semibold   text-2xl py-2 text-center text-blue-900 px-1 cursor-pointer  hover:text-blue-600"
             >
               {" "}
-              <CallUser className="inline  text-2xl" /> Connect
+              <CallUser className="inline  text-2xl" /> LET'S CONNECT
             </Link>
-            <ActivityNav route={"events"} routeName={"Kamil's Event"} />
+            <ActivityNav route={"events"} routeName={"EVENT's"} />
             {true && (
-              <ActivityNav route={"activities"} routeName={"Activities"} />
+              <ActivityNav route={"activities"} routeName={"UPDATES"} />
             )}
             <a
               href={cv}
               download={cv}
-              className="border border-white rounded-md font-semibold  py-2 text-center text-white px-1 cursor-pointer hover:bg-gray-100 hover:text-sky-500"
+              className="b rounded-md font-semibold  py-2 text-center text-blue-900 px-1 cursor-pointer  hover:text-blue-600"
             >
               {" "}
-              <DocumentText className="inline  text-2xl " /> CV{" "}
+              CV{" "}
             </a>
-            {/* </Link> */}
+      
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

@@ -10,11 +10,11 @@ const Home = () => {
         <h1 className="block text-2xl text-sky-500">Voila, welcome </h1>
         <Link to={"/home"} className=" inline">
           {" "}
-          Proceeed as guest <ArrowRight className="inline text-sky-500" />
+          Proceeed as guest <ArrowRight className="inline text-blue-950" />
         </Link>
         <Link to={"/sign-in"} className=" inline">
           {" "}
-          Admin <ArrowRight className="inline text-sky-500" />
+          Admin <ArrowRight className="inline text-sky-950" />
         </Link>
       </section>
     </>
