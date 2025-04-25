@@ -61,8 +61,8 @@ const Header = () => {
           </p>
 
           <div className="relative w-full flex justify-start max-sm:flex-col items-center gap-2">
-            <a href="#" download={cv} className="p-4 h-14 w-1/4 max-sm:w-full  text-[20px] rounded-md bg-blue-900 text-white font-bold text-center hover:bg-blue-950 transition-all duration-500">VIEW CV</a>
-            <Button to="contact" className="p-4 h-14  max-sm:w-full w-1/4 rounded-md text-[20px] bg-white text-blue-900 font-bold text-center  hover:bg-blue-950 transition-all duration-500">LET'S CONNECT</Button>
+            <a href="#" download={cv} className="p-4 h-auto w-2/4 max-sm:w-full  text-[20px] rounded-md bg-blue-900 text-white font-bold text-center hover:bg-blue-950 transition-all duration-500">VIEW CV</a>
+            <Button to="contact" className="p-4 h-auto max-sm:w-full w-2/4 rounded-md text-[20px] bg-white text-blue-900 font-bold text-center  hover:bg-blue-950 transition-all duration-500">LET'S CONNECT</Button>
           </div>
 
         </div>

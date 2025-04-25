@@ -131,7 +131,7 @@ const Events = () => {
         {!switcher ? (
           <div className="grid grid-cols-3  max-sm:grid-cols-1 max-lg:grid-cols-2 relative gap-2 py-2 px-2  ">
             {events.filter((event) => event.category == eventCategory).length ==
-            0 ? (
+              0 ? (
               <p className="text-xs text-gray-500">This category is empty</p>
             ) : (
               events

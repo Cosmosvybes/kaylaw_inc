@@ -17,18 +17,19 @@ const Signin = () => {
         },
         body: JSON.stringify({ email, password }),
       })
-        .then((res) => res.json())
+        .then((res) => {
+          if (res.status != 200) {
+            throw new Error("error signing in");
+          }
+          return res.json()
+        })
         .then((data) => {
-          console.log(data)
-          // if (data.status === "success") {
-          //   localStorage.setItem("token", data.token);
-          //   window.location.href = "/home";
-          // } else {
-          //   alert(data.message);
-          // }
+          localStorage.setItem("token", data.token);
+          location.replace("/home");
+
         });
     } catch (error) {
-      console.log(error)
+      alert("something went wrong, please try again later");
     }
 
   };

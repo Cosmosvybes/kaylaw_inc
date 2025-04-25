@@ -7,14 +7,14 @@ const Biography = () => {
         <div className="flex w-full justify-around h-auto flex-row p-2 max-sm:items-around max-sm:flex-col-reverse max-sm:gap-0">
           <div
             // data-aos="fade-down"
-            className="relative flex-col justify-start items-center  flex h-auto w-1/2  bg-[rgba(205,206,230,0.6)]  max-sm:justify-between max-sm:w-auto  max-sm:h-auto py-2 px-2 "
+            className="relative flex-col justify-center items-center  flex h-auto w-1/2  bg-[rgba(97,101,231,0.6)]  max-sm:justify-between max-sm:w-auto  max-sm:h-auto py-2 px-2 "
           >
 
-            <div className="relative rounded-full  flex justify-center items-center  bg-blue-950 h-[44rem] w-[44rem] max-sm:w-[14rem] max-sm:h-[14rem] max-sm:justify-center">
+            <div className="relative rounded-full  flex justify-center items-center  bg-blue-950 h-[32rem] w-[32rem] max-sm:w-[14rem] max-sm:h-[14rem] max-sm:justify-center">
               <img
                 src={ceo}
                 alt="ceo kaylaw inc"
-                className="relative flex-col  object-contain h-full w-[44rem] max-sm:w-[14rem] flex  justify-between max-sm:justify-center  max-sm:h-[14rem]  max-sm:rounded-xl"
+                className="relative flex-col  object-contain h-full w-[32rem] max-sm:w-[14rem] flex  justify-between max-sm:justify-center  max-sm:h-[14rem]  max-sm:rounded-xl"
               />
 
             </div>

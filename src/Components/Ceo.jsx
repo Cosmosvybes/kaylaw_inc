@@ -97,12 +97,12 @@ const Ceo = () => {
             className="relative flex-col justify-start items-center  flex h-auto w-1/2  bg-[rgba(167,171,229,0.6)]  max-sm:justify-between max-sm:w-auto  max-sm:h-auto py-2 px-2 "
           >
 
-            <div className="relative rounded-full  flex justify-start items-center max-sm:-mt-10 shadow bg-blue-950 h-[44rem] w-[44rem] max-sm:w-[14rem] max-sm:h-[14rem] max-sm:justify-center  ">
+            <div className="relative rounded-full  flex justify-center items-center max-sm:-mt-10 shadow bg-blue-950 h-[32rem] w-[32rem] max-sm:w-[14rem] max-sm:h-[14rem] max-sm:justify-center  ">
               <img
                 src={ceo}
 
                 alt="ceo kaylaw inc"
-                className="relative flex-col  object-contain h-full w-[44rem] flex  justify-between max-sm:justify-center  max-sm:w-auto rounded-full max-sm:h-52  max-sm:rounded-xl"
+                className="relative flex-col  object-contain h-full w-[32rem] flex  justify-between max-sm:justify-center  max-sm:w-auto rounded-full max-sm:h-52  max-sm:rounded-xl"
               />{" "}
             </div>
 
