@@ -26,7 +26,7 @@ const Nav = () => {
       <div className="flex justify-between sticky top-0 left-0  z-10 right-0 bg-gray-50 p-10 h-[7rem] max-sm:h-[4rem] flex-row  items-center   max-sm:px-2">
 
 
-        <div className="relative w-1/2 p-2 max-sm:p-1 h-16 hover:bg-blue-950 bg-blue-900 rounded-full">
+        <div className="relative w-1/2 p-2 max-sm:p-1 h-auto hover:bg-blue-950 bg-blue-900 rounded-full">
           <div className="relative  flex justify-start items-center   w-1/2 max-sm:w-full">
             <div className="rounded-full p-2    flex justify-center items-center  bg-blue-950 ">
               <img onClick={() => alert("okay")} src={ceo} className="w-14 h-14 max-sm:h-10 max-sm:w-10 object-cover rounded-full" /></div>
