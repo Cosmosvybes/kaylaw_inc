@@ -1,19 +1,21 @@
-import { Button, Link } from "react-scroll";
+// import { Button, Link } from "react-scroll";
 import bg from "../assets/coolbackgrounds-particles-stellar.png";
 // import AOS from "aos";
 import "aos/dist/aos.css";
 // import gsap from "gsap";
 // import { useEffect } from "react";
+import cv from "../assets/Kamil LawalCV.pdf"
 import Ceo from "./Ceo";
 import Biography from "./Biography";
 import Service from "./Service";
 import Social from "./Social";
 import Footer from "./Footer";
+import { Button } from "react-scroll";
 // import Nav from "./Nav";
 const Header = () => {
-  const handleOpenNav = () => {
-    setOpenNAv(!openNAv);
-  };
+  // const handleOpenNav = () => {
+  //   setOpenNAv(!openNAv);
+  // };
   // useEffect(() => {
   //   gsap.fromTo(
   //     "#btn",
@@ -59,8 +61,8 @@ const Header = () => {
           </p>
 
           <div className="relative w-full flex justify-start max-sm:flex-col items-center gap-2">
-            <button className="p-4 h-14 w-1/4 max-sm:w-full  text-[20px] rounded-md bg-blue-900 text-white font-bold text-center hover:bg-blue-950 transition-all duration-500">VIEW CV</button>
-            <button onClick={() => alert("ok")} className="p-4 h-14  max-sm:w-full w-1/4 rounded-md text-[20px] bg-white text-blue-900 font-bold text-center  hover:bg-blue-950 transition-all duration-500">LET'S CONNECT</button>
+            <a href="#" download={cv} className="p-4 h-14 w-1/4 max-sm:w-full  text-[20px] rounded-md bg-blue-900 text-white font-bold text-center hover:bg-blue-950 transition-all duration-500">VIEW CV</a>
+            <Button to="contact" className="p-4 h-14  max-sm:w-full w-1/4 rounded-md text-[20px] bg-white text-blue-900 font-bold text-center  hover:bg-blue-950 transition-all duration-500">LET'S CONNECT</Button>
           </div>
 
         </div>

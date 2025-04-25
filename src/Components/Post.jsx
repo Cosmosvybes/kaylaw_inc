@@ -8,7 +8,7 @@ const Post = ({ post, title, date, picture, deletePost, id, canDelete }) => {
 
   return (
     <>
-      <div className="relative block h-auto border  border-gray-200 w-auto  hover:shadow-md transition duration-300 shadow-gray-300 py-2  rounded-md hover:bg-gray-50 bg-white px-2">
+      <div className="relative block h-auto border  border-gray-200 w-auto transition duration-300  py-2  rounded-md hover:bg-gray-50 bg-white px-2">
         <fieldset className="border border-gray-300 rounded-sm ">
           <legend className="px-2 py-2 text-sky-500 ">{title}</legend>
         </fieldset>

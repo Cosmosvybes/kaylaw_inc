@@ -1,4 +1,4 @@
-import { ArrowBack, ArrowLeft, ArrowRight } from "react-huge-icons/outline";
+import { ArrowLeft, ArrowRight } from "react-huge-icons/outline";
 import image from "./assets/smallKay.jpg";
 import { useState } from "react";
 const Signin = () => {
@@ -7,9 +7,30 @@ const Signin = () => {
 
 
   const handleSignin = (e) => {
-    e.preventDefault();
-    if (!email || !password) return;
-    console.log({ email, password });
+    try {
+      e.preventDefault();
+      if (!email || !password) return;
+      fetch("https://kaylaw-server.onrender.com/api/sign-in", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data)
+          // if (data.status === "success") {
+          //   localStorage.setItem("token", data.token);
+          //   window.location.href = "/home";
+          // } else {
+          //   alert(data.message);
+          // }
+        });
+    } catch (error) {
+      console.log(error)
+    }
+
   };
 
   return (

@@ -1,10 +1,10 @@
-// import { button } from "react-scroll";
+
 import ceo from "../assets/kaylaw2-removebg-preview (1).png";
-// import kay from "../assets/kamil3.jpeg";
+
 import Aos from "aos";
-// import { useState } from "react";
+
 const Ceo = () => {
-  // const [readmore, setReadmore] = useState(false);
+
   Aos.init({
     offset: 200,
     duration: 600,

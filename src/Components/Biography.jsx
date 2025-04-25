@@ -1,9 +1,6 @@
-// import { useState } from "react";/
+
 import ceo from "../assets/kaylaw2-removebg-preview (1).png";
-// import kaylaw from "../assets/Kay4.jpeg";
-// import { Button } from "react-scroll";
 const Biography = () => {
-  // const [readmore, setReadmore] = useState(false);
   return (
     <>
       <section id="biography">
@@ -98,7 +95,7 @@ const Biography = () => {
                   where he honed his skills in public policy, sustainable
                   development, and leadership.
                 </p>
-                <p className="px-4 text-2xl max-sm:text-sm font-normal text-gray-950 mt-2">
+                <p className="px-4 text-2xl max-sm:text-sm font-normal text-gray-950 mt-2 mb-2">
                   Driven by a commitment to excellence and a vision of a more
                   just and equitable world, Kamil Lawal continues to inspire
                   and empower individuals to effect positive change in their
