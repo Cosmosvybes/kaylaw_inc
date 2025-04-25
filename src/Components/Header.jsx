@@ -53,7 +53,7 @@ const Header = () => {
           <h1 className="text-4xl text-gray-100 max-sm:text-2xl font-extrabold mt-2">
             {" "}KAMIL LAWAL
           </h1>
-          <p className="text-gray-500 font-semibold text-xl">ENTREPRENUER.</p>
+          <p className="text-gray-500 font-semibold text-xl">ENTREPRENEUR</p>
 
 
           <p className="text-xl  text-white max-sm:font-light max-sm:text-center line-clamp-6 text-pretty mt-5">
