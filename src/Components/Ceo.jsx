@@ -26,7 +26,7 @@ const Ceo = () => {
 
                 className="px-4 text-2xl font-normal max-sm:text-sm text-gray-950 "
               >
-                <span className="text-blue-700 text-2xl">Kamil Lawal</span> ,
+                <span className="text-blue-800 text-2xl">Kamil Lawal</span> ,
                 the manager of Softlink International Limited. And UK-based
                 Nigeria entrepreneur .
               </p>

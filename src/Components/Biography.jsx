@@ -30,10 +30,10 @@ const Biography = () => {
                 // data-aos="fade-down"
                 className="px-4 text-2xl max-sm:text-sm font-normal mt-2 text-gray-950"
               >
-                <span className="text-blue-500 font-semibold  text-3xl">Kamil Lawal,</span> is a
+                <span className="text-blue-800 font-semibold  text-3xl">Kamil Lawal,</span> is a
                 dynamic leader and advocate for students right and empowerment,
                 currently serving as the{" "}
-                <b className="text-sky-500">President </b>of Eduation at York
+                <b className="text-blue-800">President </b>of Eduation at York
                 St John University Student Union in the United Kingdom. Born and
                 raised in Nigeria, Kamil's journey, is marked by a relentless
                 commitment to education, social justice and community
