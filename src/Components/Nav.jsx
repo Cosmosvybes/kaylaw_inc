@@ -2,13 +2,7 @@ import { Link } from "react-scroll";
 // import { Link as link } from "react-router-dom";
 import cv from "../assets/Kamil LawalCV.pdf";
 import {
-  Information,
-  UserBlock,
-  CallUser,
-  MenuLineHorizontalHalf,
-  DocumentText,
-  ArrowBack,
-  User,
+
   MenuLineHorizontal,
   RemoveRectangle,
 } from "react-huge-icons/outline";
@@ -28,7 +22,7 @@ const Nav = () => {
 
         <div className="relative w-1/2 p-2 max-sm:p-1 h-auto hover:bg-blue-950 bg-blue-900 rounded-full">
           <div className="relative  flex justify-start items-center   w-1/2 max-sm:w-full">
-            <div className="rounded-full p-2    flex justify-center items-center  bg-blue-950 ">
+            <div className="rounded-full p-2    flex justify-center animate-pulse items-center  bg-blue-950 ">
               <img onClick={() => alert("okay")} src={ceo} className="w-14 h-14 max-sm:h-10 max-sm:w-10 object-cover rounded-full" /></div>
             <h1 className="  px-2 text-gray-50 text-5xl max-sm:text-xl font-extrabold py-1">
               KAYLAW
@@ -104,9 +98,9 @@ const Nav = () => {
               {" "}
               LET'S CONNECT
             </Link>
-            <hr className="border-t border-blue-950  w-full mt-1 mb-1"/>
+            <hr className="border-t border-blue-950  w-full mt-1 mb-1" />
             <ActivityNav route={"events"} routeName={"EVENT's"} />
-           
+
             {true && (
               <ActivityNav route={"activities"} routeName={"UPDATES"} />
             )}
