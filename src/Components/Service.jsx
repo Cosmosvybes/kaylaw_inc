@@ -28,7 +28,7 @@ const Service = () => {
     },
   };
 
-  const [photos] = useState([{ image: image1 }, { image: image2 }, { image: image3 }, { image: image4 }]);
+  const [photos] = useState([{ image: image1, location: "London, UK" }, { image: image2, location: "London, UK" }, { image: image3, location: "London, UK" }, { image: image4, location: "London, UK" }]);
   const videos = [{ video: clip1 }, { video: clip2 }, { video: clip3 }, { video: clip4 }];
   return (
     <>
@@ -51,7 +51,7 @@ const Service = () => {
             >
               {photos.map((_) => (
                 <SwiperSlide key={_.image} className="max-md:py-0 max-sm:p-4 w-4/5">
-                  <Card image={_.image} />
+                  <Card image={_.image} location={_.location} />
                 </SwiperSlide>
               ))}
             </Swiper>
