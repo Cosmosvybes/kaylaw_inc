@@ -16,7 +16,7 @@ const Ceo = () => {
     <>
       <section id="about">
         <div className="flex justify-around h-auto flex-row p-2 max-sm:items-around max-sm:flex-col-reverse max-sm:gap-0">
-          <div className="flex flex-col bg-[rgba(167,171,229,0.9)]     justify-start w-1/2 max-sm:w-full  ">
+          <div className="flex flex-col bg-[rgba(117,126,246,0.9)]     justify-start w-1/2 max-sm:w-full  ">
             <h1 className=" text-blue-900  font-extrabold text-4xl mt-2 max-sm:text-sm  px-4">
               {" "}
               MEET KAMIL LAWAL
@@ -26,7 +26,7 @@ const Ceo = () => {
 
                 className="px-4 text-2xl font-normal max-sm:text-sm text-gray-950 "
               >
-                <span className="text-blue-500 text-2xl">Kamil Lawal</span> ,
+                <span className="text-blue-700 text-2xl">Kamil Lawal</span> ,
                 the manager of Softlink International Limited. And UK-based
                 Nigeria entrepreneur .
               </p>

@@ -2,6 +2,8 @@ import { useState } from "react";
 import {
   ArrowBack,
   FilterThreeLineHorizontal,
+  LoadingDashed,
+  LoadingDoted,
   PlusThin,
   RemoveThin,
   SendFast,
@@ -63,27 +65,83 @@ const Events = () => {
   const [post, setPost] = useState("");
   const [postTitle, setTitle] = useState("");
   const [postImage, setPostImage] = useState(null);
+  const [isLoading, setLoading] = useState(false)
   //handle create post
-  const submitPost = (e) => {
-    e.preventDefault();
-    if (!post || !postTitle) return;
-    const postcategory = document.querySelector("#postCategory");
-    let categoryChoice = postcategory.options[postcategory.selectedIndex].value;
-    let postData = {
-      id: Date.now(),
-      post: post,
-      title: postTitle,
-      category: categoryChoice,
-      date: new Date().toUTCString(),
-      image: postImage,
-    };
-    setEvents([...events, postData]);
-    setSwitch(!switcher);
+  const submitPost = async (e) => {
+    try {
+      e.preventDefault();
+      if (!post || !postTitle) return;
+      const postcategory = document.querySelector("#postCategory");
+      let categoryChoice = postcategory.options[postcategory.selectedIndex].value;
+      let postData = {
+        id: Date.now(),
+        post: post,
+        title: postTitle,
+        category: categoryChoice,
+        date: new Date().toUTCString(),
+        image: postImage,
+      };
+      setEvents([...events, postData]);
+      setSwitch(!switcher);
+      const token = localStorage.getItem("token");
+      if (!token) return;
+
+      setLoading(true)
+      const response = await fetch("https://kaylaw-server.onrender.com/api/create", { method: "POST", headers: { "Content-Type": "application/json", "Authorization": `Bearer ${token}` }, body: JSON.stringify(postData) });
+      const data = await response.json();
+      if (response.status != 200) {
+        setLoading(true)
+        throw new Error("something went wrong, please try again later");
+
+      }
+      else if (response.status === 403) {
+        setLoading(true)
+        throw new Error("forbidden")
+
+      }
+      else {
+        setPost("");
+        setTitle("");
+        setPostImage(null);
+        setPreview(null);
+        alert("post created successfully")
+        location.replace("/home")
+        setLoading(false)
+        // console.log(data)
+      }
+    } catch (error) {
+      alert(error)
+      setLoading(false)
+    }
+
   };
 
   //handleDeletePost
   const handleDeletePost = (id) => {
     setEvents(events.filter((event) => event.id != id));
+    const token = localStorage.getItem("token");
+    if (!token) return;
+    setLoading(true)
+    try {
+
+      fetch("https://kaylaw-server.onrender.com/api/delete", { method: "DELETE", headers: { "Content-Type": "application/json", "Authorizaton": `Bearer ${token}` }, body: JSON.stringify({ id }) })
+        .then((res) => {
+          if (!res.ok) {
+            setLoading(true)
+            throw new Error("something went wrong, please try again later")
+          }
+          return res.json();
+        })
+        .then((data) => {
+          setLoading(true)
+          alert("Post deleted successfully")
+
+        })
+    } catch (error) {
+      setLoading(true)
+      alert("Post deletion failed")
+
+    }
   };
 
   const handleFilter = () => {
@@ -100,16 +158,23 @@ const Events = () => {
     let ImageUrl = URL.createObjectURL(imageFile);
     setPostImage(ImageUrl);
     setPreview(ImageUrl);
+
+
   };
 
   return (
     <>
+
+      {isLoading && <div className="h-screen w-full backdrop-blur-sm transition-all duration-500  fixed flex justify-center items-center p-4 left-0 right-0 top-0 bg-[rgba(0,0,0,0.5)]">
+        <LoadingDashed className="text-5xl animate-spin" />
+
+      </div>}
       <ArrowBack
-        className="text-2xl ml-4 mt-1 text-sky-500 text-light"
+        className="text-2xl ml-4 mt-1 text-blue-700 text-light"
         onClick={() => history.back()}
       />
       <section className="h-screen px-44 max-sm:px-1">
-        <h1 className="text-sky-500 text-2xl ml-2 text-left font-light">
+        <h1 className="text-blue-700 text-2xl ml-2 text-left font-light">
           {" "}
           My Activities
         </h1>
@@ -152,7 +217,7 @@ const Events = () => {
             )}
 
             <PlusThin
-              className="fixed bottom-0  right-0 text-7xl text-sky-500 mr-20 mb-24 max-sm:mb-20 max-sm:mr-4 z-10 "
+              className="fixed bottom-0  right-0 text-7xl text-blue-700 mr-20 mb-24 max-sm:mb-20 max-sm:mr-4 z-10 "
               onClick={handleSwitch}
             />
           </div>
@@ -164,7 +229,7 @@ const Events = () => {
                 placeholder="Post title"
                 value={postTitle}
                 onChange={(e) => setTitle(e.target.value)}
-                className="outline-sky-500 border border-gray-300 w-52 max-sm:w-auto px-2 py-2 rounded-md mb-1"
+                className="outline-blue-700 border border-gray-300 w-52 max-sm:w-auto px-2 py-2 rounded-md mb-1"
               />
 
               <select
@@ -185,7 +250,7 @@ const Events = () => {
             <textarea
               value={post}
               onChange={(e) => setPost(e.target.value)}
-              className="border border-gray-300 w-full rounded-md h-96 text-xs outline-sky-600 px-2 py-2"
+              className="border border-gray-300 w-full rounded-md h-96 text-xs outline-blue-700 px-2 py-2"
             ></textarea>
             <div className="flex justify-between items-center mt-3 px-3">
               <div className="flex justify-around gap-3 items-center">
@@ -197,12 +262,12 @@ const Events = () => {
                 />
                 <label htmlFor="imageFile">
                   {" "}
-                  <UploadRectangle className="text-3xl text-sky-500" />
+                  <UploadRectangle className="text-3xl text-blue-700" />
                 </label>
 
                 <SendFast
                   onClick={submitPost}
-                  className="text-3xl text-green-500"
+                  className="text-3xl text-blue-900"
                 />
               </div>
               <RemoveThin

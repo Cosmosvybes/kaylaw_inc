@@ -12,8 +12,10 @@ const Signin = () => {
       if (!email || !password) return;
       fetch("https://kaylaw-server.onrender.com/api/sign-in", {
         method: "POST",
+        credentials: "include",
+        mode: "cors",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "Application/json",
         },
         body: JSON.stringify({ email, password }),
       })
@@ -33,7 +35,7 @@ const Signin = () => {
     }
 
   };
-
+  // https://kaylaw-server.onrender.com/
   return (
     <>
       <div className="flex justify-start items-center px-2">

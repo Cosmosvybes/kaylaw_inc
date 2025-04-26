@@ -47,6 +47,7 @@ const Service = () => {
               modules={[EffectCards]}
               className="mySwiper"
               slidesPerView={1}
+      
             >
               {photos.map((_) => (
                 <SwiperSlide key={_.image} className="max-md:py-0 max-sm:p-4 w-4/5">
@@ -69,6 +70,8 @@ const Service = () => {
           <p className="text-gray-400">swipe left for more.</p>
           <div className="relative w-full h-full">
             <Swiper
+                    swipeHandler={true}
+                    
               pagination={pagination}
               modules={[Pagination]}
               className="mySwiper"
