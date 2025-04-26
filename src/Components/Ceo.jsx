@@ -94,7 +94,7 @@ const Ceo = () => {
 
           <div
             // data-aos="fade-down"
-            className="relative flex-col justify-start items-center  flex h-auto w-1/2  bg-[rgba(167,171,229,0.6)]  max-sm:justify-between max-sm:w-auto  max-sm:h-auto py-2 px-2 "
+            className="relative flex-col justify-start items-center  flex h-auto w-1/2  rounded-tl-lg rounded-tr-lg bg-[rgba(167,171,229,0.6)]  max-sm:justify-between max-sm:w-auto  max-sm:h-auto py-2 px-2 "
           >
 
             <div className="relative rounded-full  flex justify-center items-center max-sm:-mt-10 shadow bg-blue-950 h-[32rem] w-[32rem] max-sm:w-[14rem] max-sm:h-[14rem] max-sm:justify-center  ">

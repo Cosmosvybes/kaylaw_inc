@@ -7,7 +7,7 @@ const Biography = () => {
         <div className="flex w-full justify-around h-auto flex-row p-2 max-sm:items-around max-sm:flex-col-reverse max-sm:gap-0">
           <div
             // data-aos="fade-down"
-            className="relative flex-col justify-center items-center  flex h-auto w-1/2  bg-[rgba(97,101,231,0.6)]  max-sm:justify-between max-sm:w-auto  max-sm:h-auto py-2 px-2 "
+            className="relative flex-col justify-center items-center  rounded-bl-lg rounded-br-lg flex h-auto w-1/2  bg-[rgba(97,101,231,0.6)]  max-sm:justify-between max-sm:w-auto  max-sm:h-auto py-2 px-2 "
           >
 
             <div className="relative rounded-full  flex justify-center items-center  bg-blue-950 h-[32rem] w-[32rem] max-sm:w-[14rem] max-sm:h-[14rem] max-sm:justify-center">

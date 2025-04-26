@@ -7,9 +7,9 @@ import {
 const Footer = () => {
   return (
     <>
-      <div className="grid h-64 max-sm:h-auto bg-blue-950  px-44 max-sm:px-3 max-sm:py-4 grid-cols-2 gap-5 max-sm:grid-cols-1  py-4 text-xs ">
+      <div className="grid h-64 max-sm:h-auto bg-gradient-to-bl from-blue-800 to-black px-44 max-sm:px-3 max-sm:py-4 grid-cols-2 gap-5 max-sm:grid-cols-1  py-4 text-xs ">
         <div className="flex flex-col text-white mb-1 text-sm">
-          <h1 className="text-xl">Links </h1>
+          <h1 className="text-xl">Quick Links </h1>
           <Link className="text-2xl max-sm:text-md">Home</Link>
           <Link className="text-2xl max-sm:text-md">Contact me</Link>
           <Link className="text-2xl max-sm:text-md">Biography</Link>

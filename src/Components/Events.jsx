@@ -165,8 +165,8 @@ const Events = () => {
   return (
     <>
 
-      {isLoading && <div className="h-screen w-full backdrop-blur-sm transition-all duration-500  fixed flex justify-center items-center p-4 left-0 right-0 top-0 bg-[rgba(0,0,0,0.5)]">
-        <LoadingDashed className="text-5xl animate-spin" />
+      {isLoading && <div className="h-screen w-full z-30 backdrop-blur-sm transition-all duration-500  fixed flex justify-center items-center p-4 left-0 right-0 top-0 bg-[rgba(0,0,0,0.5)]">
+        <LoadingDashed className="text-5xl text-blue-950 animate-spin" />
 
       </div>}
       <ArrowBack

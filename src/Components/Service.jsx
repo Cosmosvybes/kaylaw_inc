@@ -24,7 +24,7 @@ const Service = () => {
   const pagination = {
     clickable: true,
     renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + '</span>';
+      return '<span class="z-index:9999 color:blue' + className + '">' + (index + 1) + '</span>';
     },
   };
 
@@ -32,13 +32,13 @@ const Service = () => {
   const videos = [{ video: clip1 }, { video: clip2 }, { video: clip3 }, { video: clip4 }];
   return (
     <>
-      <section className="bg-blue-900  p-4  max-sm:h-auto max-sm:flex-col h-[44rem] flex justify-between items-start py-10 max-sm:py-4 gap-5">
+      <section className=" bg-gray-100 p-4  max-sm:h-auto max-sm:flex-col h-[44rem] flex justify-between items-start py-10 max-sm:py-4 gap-5">
 
         <div className="relative h-[40rem]  bg-blue-950 rounded-lg px-5 max-sm:px-2 w-1/2 max-sm:w-full   flex max-sm:h-full justify-start items-center flex-col">
           <h1 className="text-white font-extrabold text-start mt-2  text-2xl max-sm:text-sm ">
             PHOTOS
           </h1>
-
+          <p className="text-gray-400 mt-2">swipe left for more.</p>
           <div className="relative w-full h-full mt-10 p-4  max-sm:p-2">
             <Swiper
 
@@ -47,7 +47,7 @@ const Service = () => {
               modules={[EffectCards]}
               className="mySwiper"
               slidesPerView={1}
-      
+
             >
               {photos.map((_) => (
                 <SwiperSlide key={_.image} className="max-md:py-0 max-sm:p-4 w-4/5">
@@ -61,7 +61,7 @@ const Service = () => {
         </div>
 
 
-        <div className="relative h-[40rem] p-5 max-sm:p-3 gap-4 bg-blue-900  rounded-lg px-5 max-sm:px-2 w-1/2 max-sm:w-full   flex max-sm:h-full justify-start items-center flex-col">
+        <div className="relative h-[40rem] p-5 max-sm:p-3 gap-4 bg-blue-950  rounded-lg px-5 max-sm:px-2 w-1/2 max-sm:w-full   flex max-sm:h-full justify-start items-center flex-col">
           <h1 className="text-white font-extrabold text-start mt-2  text-2xl max-sm:text-sm ">
             SPEECH CLIPS
           </h1>
@@ -70,8 +70,7 @@ const Service = () => {
           <p className="text-gray-400">swipe left for more.</p>
           <div className="relative w-full h-full">
             <Swiper
-                    swipeHandler={true}
-                    
+              swipeHandler={true}
               pagination={pagination}
               modules={[Pagination]}
               className="mySwiper"
